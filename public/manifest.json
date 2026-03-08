@@ -1,0 +1,24 @@
+{
+  "name": "Kfz-Kennzeichen Trainer",
+  "short_name": "KFZ Trainer",
+  "description": "Lerne alle deutschen Kfz-Kennzeichen mit Spaced Repetition.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#f9fafb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
