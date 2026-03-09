@@ -23,13 +23,99 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  /* Verhindert iOS-Zoom beim Doppeltippen */
   touch-action: manipulation;
-  /* Verhindert versehentliches Text-Markieren beim Tippen */
   -webkit-user-select: none;
   user-select: none;
-  /* Kein Highlight-Flash auf iOS bei Tap */
   -webkit-tap-highlight-color: transparent;
-  /* Safe-area für iPhone Notch / Dynamic Island */
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ── 3D Bonbon Buttons ─────────────────────────────────────────── */
+
+.btn-3d {
+  color: white;
+  font-weight: 900;
+  font-size: 1.1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  border: none;
+  border-radius: 1rem;
+  height: 5rem;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-3d:active {
+  transform: translateY(3px);
+}
+
+/* No — Rot */
+.btn-no {
+  background: linear-gradient(to bottom, #f87171, #dc2626);
+  box-shadow:
+    0 6px 0 #991b1b,
+    0 8px 20px rgba(220, 38, 38, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-no:active {
+  box-shadow:
+    0 3px 0 #991b1b,
+    0 4px 10px rgba(220, 38, 38, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Yes — Gelb */
+.btn-yes {
+  background: linear-gradient(to bottom, #fcd34d, #f59e0b);
+  box-shadow:
+    0 6px 0 #b45309,
+    0 8px 20px rgba(245, 158, 11, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.btn-yes:active {
+  box-shadow:
+    0 3px 0 #b45309,
+    0 4px 10px rgba(245, 158, 11, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Easy — Grün */
+.btn-easy {
+  background: linear-gradient(to bottom, #4ade80, #16a34a);
+  box-shadow:
+    0 6px 0 #14532d,
+    0 8px 20px rgba(22, 163, 74, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-easy:active {
+  box-shadow:
+    0 3px 0 #14532d,
+    0 4px 10px rgba(22, 163, 74, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Gesperrter Zustand (Karte noch nicht umgedreht) */
+.btn-3d.btn-locked {
+  opacity: 0.75;
+  filter: saturate(0.7);
+}
+
+/* Fixierte Button-Leiste am unteren Rand */
+.action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: #f9fafb;
+  padding: 0.75rem 1.5rem calc(0.75rem + env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  max-width: 24rem;
+  margin: 0 auto;
 }

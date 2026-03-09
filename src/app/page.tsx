@@ -333,7 +333,7 @@ export default function Home() {
   // ── Main screen ──────────────────────────────────────────────────────────────
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 pb-36">
 
       {/* Header */}
       <header className="px-6 pt-10 pb-2 flex items-center justify-between max-w-sm mx-auto w-full">
@@ -424,17 +424,17 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Haupt-Buttons — sticky am unteren Rand für Daumen-Erreichbarkeit */}
-      <div className="sticky bottom-0 z-10 bg-gray-50 px-6 pt-2 pb-2 grid grid-cols-3 gap-2 max-w-sm mx-auto w-full">
+      {/* Haupt-Buttons — fixed am unteren Bildschirmrand */}
+      <div className="action-bar">
         <button onClick={handleUnknown}
-          className={`h-20 rounded-2xl bg-red-600 text-white font-black text-sm active:scale-95 transition-all flex items-center justify-center ${!flipped ? 'opacity-80' : 'opacity-100'}`}
-        >Nicht gekonnt [1]</button>
+          className={`btn-3d btn-no ${!flipped ? 'btn-locked' : ''}`}
+        >No [1]</button>
         <button onClick={handleKnown}
-          className={`h-20 rounded-2xl bg-green-500 text-white font-black text-sm active:scale-95 transition-all flex items-center justify-center ${!flipped ? 'opacity-80' : 'opacity-100'}`}
-        >Gekonnt [2]</button>
+          className={`btn-3d btn-yes ${!flipped ? 'btn-locked' : ''}`}
+        >Yes [2]</button>
         <button onClick={handleMasterKnown}
-          className={`h-20 rounded-2xl bg-emerald-800 text-white font-black text-sm active:scale-95 transition-all flex items-center justify-center ${!flipped ? 'opacity-80' : 'opacity-100'}`}
-        >Weiß ich [3]</button>
+          className={`btn-3d btn-easy ${!flipped ? 'btn-locked' : ''}`}
+        >Easy [3]</button>
       </div>
 
       {/* Undo-Button */}
