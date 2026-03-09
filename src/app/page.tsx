@@ -428,13 +428,13 @@ export default function Home() {
       <div className="action-bar">
         <button onClick={handleUnknown}
           className={`btn-3d btn-no ${!flipped ? 'btn-locked' : ''}`}
-        >No [1]</button>
+        >No</button>
         <button onClick={handleKnown}
           className={`btn-3d btn-yes ${!flipped ? 'btn-locked' : ''}`}
-        >Yes [2]</button>
+        >Yes</button>
         <button onClick={handleMasterKnown}
           className={`btn-3d btn-easy ${!flipped ? 'btn-locked' : ''}`}
-        >Easy [3]</button>
+        >Easy</button>
       </div>
 
       {/* Undo-Button */}
