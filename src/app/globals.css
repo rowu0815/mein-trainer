@@ -66,34 +66,34 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
-/* Yes — Gelb */
+/* Yes — Grün */
 .btn-yes {
-  background: linear-gradient(to bottom, #fcd34d, #f59e0b);
-  box-shadow:
-    0 6px 0 #b45309,
-    0 8px 20px rgba(245, 158, 11, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-.btn-yes:active {
-  box-shadow:
-    0 3px 0 #b45309,
-    0 4px 10px rgba(245, 158, 11, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-/* Easy — Grün */
-.btn-easy {
   background: linear-gradient(to bottom, #4ade80, #16a34a);
   box-shadow:
     0 6px 0 #14532d,
     0 8px 20px rgba(22, 163, 74, 0.45),
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
-.btn-easy:active {
+.btn-yes:active {
   box-shadow:
     0 3px 0 #14532d,
     0 4px 10px rgba(22, 163, 74, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Easy — Dunkelgrün */
+.btn-easy {
+  background: linear-gradient(to bottom, #16a34a, #14532d);
+  box-shadow:
+    0 6px 0 #052e16,
+    0 8px 20px rgba(20, 83, 45, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.btn-easy:active {
+  box-shadow:
+    0 3px 0 #052e16,
+    0 4px 10px rgba(20, 83, 45, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 /* Gesperrter Zustand (Karte noch nicht umgedreht) */
