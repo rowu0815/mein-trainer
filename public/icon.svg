@@ -5,60 +5,69 @@
 
   <!-- ── Kennzeichen ── -->
   <!-- Kennzeichen-Körper (weißer Grund, schwarzer Rahmen) -->
-  <rect x="48" y="228" width="416" height="104" rx="10" ry="10"
+  <rect x="40" y="224" width="432" height="108" rx="10" ry="10"
         fill="#FAFAFA" stroke="#111111" stroke-width="6"/>
   <!-- Innerer geprägter Rand -->
-  <rect x="54" y="234" width="404" height="92" rx="7" ry="7"
+  <rect x="46" y="230" width="420" height="96" rx="7" ry="7"
         fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
 
-  <!-- EU-Feld (blau) -->
-  <rect x="48" y="228" width="72" height="104" rx="10" ry="10"
-        fill="#003399"/>
-  <!-- EU-Feld rechte Kante überdecken (kein Radius rechts) -->
-  <rect x="96" y="228" width="24" height="104" fill="#003399"/>
+  <!-- EU-Feld (blau) — mit Clippath damit Radius nur links -->
+  <clipPath id="eu-clip">
+    <rect x="40" y="224" width="78" height="108" rx="10" ry="10"/>
+  </clipPath>
+  <rect x="40" y="224" width="78" height="108" fill="#003399" clip-path="url(#eu-clip)"/>
+  <!-- rechte Kante EU-Feld gerade -->
+  <rect x="96" y="224" width="22" height="108" fill="#003399"/>
 
   <!-- Trennlinie EU / Text -->
-  <line x1="120" y1="234" x2="120" y2="326" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+  <line x1="118" y1="230" x2="118" y2="326" stroke="rgba(0,0,0,0.3)" stroke-width="2"/>
 
-  <!-- EU-Sterne (12 Sterne im Kreis) -->
-  <g transform="translate(84,274)">
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(  0) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate( 30) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate( 60) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate( 90) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(120) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(150) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(180) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(210) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(240) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(270) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(300) translate(0,-19)">★</text>
-    <text text-anchor="middle" dominant-baseline="central" font-size="7" fill="#FFD700" transform="rotate(330) translate(0,-19)">★</text>
+  <!-- EU-Sterne (12 Sterne im Kreis, r=18) -->
+  <g transform="translate(79,272)">
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(  0) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate( 30) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate( 60) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate( 90) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(120) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(150) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(180) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(210) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(240) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(270) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(300) translate(0,-18)">★</text>
+    <text text-anchor="middle" dominant-baseline="central" font-size="8" fill="#FFD700" transform="rotate(330) translate(0,-18)">★</text>
   </g>
 
   <!-- D -->
-  <text x="84" y="322" text-anchor="middle" font-family="Arial Black, Arial, sans-serif"
-        font-weight="900" font-size="11" fill="#FFFFFF" letter-spacing="1">D</text>
+  <text x="79" y="320" text-anchor="middle"
+        font-family="Arial Black, Arial, sans-serif"
+        font-weight="900" font-size="12" fill="#FFFFFF" letter-spacing="1">D</text>
 
-  <!-- Kennzeichen-Text: NOR · - · RW 123 -->
-  <text x="136" y="298" text-anchor="start"
-        font-family="'Arial Black', 'Arial', sans-serif"
-        font-weight="900" font-size="52" fill="#111111" letter-spacing="1">
-    NOR<tspan dx="6">-</tspan><tspan dx="6">RW 123</tspan>
-  </text>
+  <!-- Kennzeichen-Text: NOR - R 1, garantiert im Rahmen -->
+  <text
+    x="130" y="300"
+    text-anchor="start"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-weight="900"
+    font-size="54"
+    fill="#111111"
+    textLength="328"
+    lengthAdjust="spacing"
+    letter-spacing="0"
+  >NOR - R 1</text>
 
   <!-- ── Glühbirne über dem Bindestrich ── -->
-  <!-- Glühbirne Glühen (weicher gelber Schimmer) -->
+  <!-- Glüh-Schimmer -->
   <radialGradient id="glow" cx="50%" cy="50%" r="50%">
     <stop offset="0%"   stop-color="#FFE55C" stop-opacity="0.9"/>
     <stop offset="60%"  stop-color="#FFCC00" stop-opacity="0.4"/>
     <stop offset="100%" stop-color="#FFCC00" stop-opacity="0"/>
   </radialGradient>
-  <circle cx="272" cy="218" r="44" fill="url(#glow)"/>
+  <circle cx="263" cy="214" r="44" fill="url(#glow)"/>
 
   <!-- Glühbirnengehäuse -->
   <path d="
-    M272,178
+    M263,174
     a 28,28 0 0,1 20,47.8
     l-4,14 a4,4 0 0,1-4,3
     l-24,0 a4,4 0 0,1-4,-3
@@ -67,22 +76,22 @@
   " fill="#FFE033" stroke="#E6A800" stroke-width="2.5"/>
 
   <!-- Glasreflexion -->
-  <ellipse cx="264" cy="192" rx="7" ry="10" fill="rgba(255,255,255,0.45)" transform="rotate(-20,264,192)"/>
+  <ellipse cx="255" cy="188" rx="7" ry="10" fill="rgba(255,255,255,0.45)" transform="rotate(-20,255,188)"/>
 
   <!-- Sockel-Rillen -->
-  <rect x="248" y="240" width="48" height="7" rx="3" fill="#D4A017" stroke="#B8860B" stroke-width="1"/>
-  <rect x="251" y="249" width="42" height="6" rx="3" fill="#D4A017" stroke="#B8860B" stroke-width="1"/>
-  <rect x="255" y="256" width="34" height="5" rx="2.5" fill="#C8960C"/>
+  <rect x="239" y="236" width="48" height="7" rx="3" fill="#D4A017" stroke="#B8860B" stroke-width="1"/>
+  <rect x="242" y="245" width="42" height="6" rx="3" fill="#D4A017" stroke="#B8860B" stroke-width="1"/>
+  <rect x="246" y="252" width="34" height="5" rx="2.5" fill="#C8960C"/>
 
   <!-- Strahllinien -->
   <g stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" opacity="0.85">
-    <line x1="272" y1="162" x2="272" y2="154"/>
-    <line x1="299" y1="171" x2="305" y2="165"/>
-    <line x1="309" y1="198" x2="317" y2="198"/>
-    <line x1="245" y1="171" x2="239" y2="165"/>
-    <line x1="235" y1="198" x2="227" y2="198"/>
-    <line x1="293" y1="163" x2="297" y2="156"/>
-    <line x1="251" y1="163" x2="247" y2="156"/>
+    <line x1="263" y1="158" x2="263" y2="150"/>
+    <line x1="290" y1="167" x2="296" y2="161"/>
+    <line x1="300" y1="194" x2="308" y2="194"/>
+    <line x1="236" y1="167" x2="230" y2="161"/>
+    <line x1="226" y1="194" x2="218" y2="194"/>
+    <line x1="284" y1="159" x2="288" y2="152"/>
+    <line x1="242" y1="159" x2="238" y2="152"/>
   </g>
 
 </svg>
